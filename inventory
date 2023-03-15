@@ -1,0 +1,8 @@
+[prometheus]
+localhost
+
+[node_exporter]
+localhost
+
+[grafana]
+localhost

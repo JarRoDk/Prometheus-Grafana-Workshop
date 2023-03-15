@@ -1,0 +1,24 @@
+---
+- hosts: node_exporter
+  become: yes
+  become_user: root
+  become_method: sudo
+  connection: local
+  roles:
+    - prometheus_node_exporter
+
+- hosts: prometheus
+  become: yes
+  connection: local
+  become_user: root
+  become_method: sudo
+  roles:
+    - prometheus
+
+- hosts: grafana
+  become: yes
+  connection: local
+  become_user: root
+  become_method: sudo
+  roles:
+    - grafana
